@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterCarousel : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class CharacterCarousel : MonoBehaviour
     public float spacing = 425f;
     public float startX = -210f;
     public float animationDuration = 0.3f;
+
+    public Button leftButton;
+    public Button rightButton;
 
     private bool isAnimating = false;
 
@@ -118,5 +122,11 @@ public class CharacterCarousel : MonoBehaviour
         ArrangeCharacters();
 
         isAnimating = false;
+    }
+
+    public void SetButtonsActive(bool active)
+    {
+        leftButton.gameObject.SetActive(active);
+        rightButton.gameObject.SetActive(active);
     }
 }
