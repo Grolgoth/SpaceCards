@@ -18,7 +18,6 @@ public class GameState : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public static void setShipClass(int param)

@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 using System.Collections.Generic;
+using System.Globalization;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -11,11 +13,14 @@ public class SettingsMenu : MonoBehaviour
     public Slider audioSlider;
     public Slider musicSlider;
     public Toggle fastAnimationSpeed;
-
     public Resolution[] resolutions;
+
+    string path;
 
     void Awake()
     {
+        path = Application.persistentDataPath + "/settings.ini";
+
         resolutions = Screen.resolutions;
         if (resolutions.Length == 0)
         {
@@ -50,7 +55,6 @@ public class SettingsMenu : MonoBehaviour
 
     void LoadSettings()
     {
-        string path = Application.persistentDataPath + "/settings.ini";
         if (System.IO.File.Exists(path))
         {
             string[] lines = System.IO.File.ReadAllLines(path);
@@ -107,6 +111,7 @@ public class SettingsMenu : MonoBehaviour
             string[] defaults = { "fullscreen=true", "vsync=false", "audio=1", "music=1", "animspeed=false", "resolution=1920x1080" };
             System.IO.File.WriteAllLines(path, defaults);
         }
+        SetRuntimeSettings();
     }
 
     public void SaveSettings()
@@ -114,10 +119,13 @@ public class SettingsMenu : MonoBehaviour
         string[] lines = new string[6];
         lines[0] = fullscreenToggle.isOn ? "fullscreen=true" : "fullscreen=false";
         lines[1] = vSyncToggle.isOn ? "vsync=true" : "vsync=false";
-        lines[2] = "audio=" + audioSlider.value.ToString();
-        lines[3] = "music=" + musicSlider.value.ToString();
+        lines[2] = "audio=" + audioSlider.value.ToString(CultureInfo.InvariantCulture);
+        lines[3] = "music=" + musicSlider.value.ToString(CultureInfo.InvariantCulture);
         lines[4] = fastAnimationSpeed.isOn ? "animspeed=true" : "animspeed=false";
         lines[5] = "resolution=" + Screen.width + "x" + Screen.height;
+
+        SetRuntimeSettings();
+        File.WriteAllLines(path, lines);
     }
 
     public void SetResolution(int index)
@@ -154,5 +162,19 @@ public class SettingsMenu : MonoBehaviour
     {
         PlayerPrefs.SetInt("AnimSpeed", fast ? 1 : 0);
         PlayerPrefs.Save();
+    }
+
+    public void Close()
+    {
+        SaveSettings();
+        PersistentUI.Instance.Close("settings");
+    }
+
+    void SetRuntimeSettings()
+    {
+        SetVSync(vSyncToggle.isOn);
+        SetAudioVolume(audioSlider.value);
+        SetMusicVolume(musicSlider.value);
+        SetAnimationSpeed(fastAnimationSpeed.isOn);
     }
 }

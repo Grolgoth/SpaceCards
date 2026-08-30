@@ -4,17 +4,11 @@ public class MainMenuController : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject conOrNewGame;
-    public GameObject settings;
-    //public GameObject settings;
 
     void Start()
     {
-        // Set initial visibility
-        Debug.Log("Starting main menu controller");
         mainMenu.SetActive(true);
-        //settings.SetActive(false);
         conOrNewGame.SetActive(false);
-        settings.SetActive(false);
     }
 
     // Called by the Play button
@@ -42,15 +36,7 @@ public class MainMenuController : MonoBehaviour
     // Called by the Settings button
     public void OpenSettings()
     {
-        mainMenu.SetActive(false);
-        settings.SetActive(true);
-    }
-
-    public void Back()
-    {
-        settings.SetActive(false);
-        conOrNewGame.SetActive(false);
-        mainMenu.SetActive(true);
+        PersistentUI.Instance.Show("settings");
     }
 
     // Called by the Quit button

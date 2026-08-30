@@ -11,8 +11,7 @@ public static class GameLoader
     {
         GameState.Instance.playerData = new PlayerData();
         GameState.Instance.overworldData = new OverworldData();
-        LoadingManager.TargetScene = "NewGameScene"; //maybe a cinematic, maybe for some choices to be made like class party creation etc
-        SceneManager.LoadScene("Loading");
+        LoadingManager.Instance.SwitchScene("Main Menu", "NewGameScene");
     }
 
     public static void LoadGame()
