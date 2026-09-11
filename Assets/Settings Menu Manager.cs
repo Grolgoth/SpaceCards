@@ -148,20 +148,17 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetAudioVolume(float value)
     {
-        PlayerPrefs.SetFloat("AudioVolume", value);
-        PlayerPrefs.Save();
+        SettingsData.AudioVolume = value;
     }
 
     public void SetMusicVolume(float value)
     {
-        PlayerPrefs.SetFloat("MusicVolume", value);
-        PlayerPrefs.Save();
+        SettingsData.MusicVolume = value;
     }
 
     public void SetAnimationSpeed(bool fast)
     {
-        PlayerPrefs.SetInt("AnimSpeed", fast ? 1 : 0);
-        PlayerPrefs.Save();
+        SettingsData.AnimationSpeed = fast;
     }
 
     public void Close()

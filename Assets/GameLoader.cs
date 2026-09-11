@@ -9,7 +9,7 @@ public static class GameLoader
 {
     public static void NewGame()
     {
-        GameState.Instance.playerData = new PlayerData();
+        GameState.Instance.setInitialPlayerData();
         GameState.Instance.overworldData = new OverworldData();
         LoadingManager.Instance.SwitchScene("Main Menu", "NewGameScene");
     }

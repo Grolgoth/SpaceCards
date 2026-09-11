@@ -20,9 +20,15 @@ public class GameState : MonoBehaviour
         Instance = this;
     }
 
-    public static void setShipClass(int param)
+    public void setShipClass(int param)
     {
-        Instance.playerData.ship.classNumber = param;
+        playerData.ship.classNumber = param;
+    }
+
+    public void setInitialPlayerData()
+    {
+        playerData = new PlayerData();
+        playerData.resources.Add("SC", 2000);
     }
 }
 

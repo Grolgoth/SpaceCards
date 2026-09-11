@@ -1,10 +1,12 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterCarousel : MonoBehaviour
 {
     public RectTransform content;
+    public TextMeshProUGUI SelectShipText;
 
     public float spacing = 425f;
     public float startX = -210f;
@@ -128,5 +130,6 @@ public class CharacterCarousel : MonoBehaviour
     {
         leftButton.gameObject.SetActive(active);
         rightButton.gameObject.SetActive(active);
+        SelectShipText.gameObject.SetActive(active);
     }
 }

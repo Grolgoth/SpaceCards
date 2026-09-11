@@ -4,6 +4,10 @@ using UnityEngine.UI;
 
 public class ShipInfoPanel : MonoBehaviour
 {
+    public GameObject ShipCarousel;
+    public GameObject ShipCarouselBackground;
+    public GameObject LibrarySceneBackground;
+
     public TextMeshProUGUI TitleText;
     public BookScript MainText;
     public CharacterCarousel scroller;
@@ -55,10 +59,12 @@ public class ShipInfoPanel : MonoBehaviour
 
     public void Confirm()
     {
-        GameState.setShipClass(selectedShipClass);
+        GameState.Instance.setShipClass(selectedShipClass);
 
         gameObject.SetActive(false);
-        //go to the library / workshop...
+        ShipCarousel.SetActive(false);
+        ShipCarouselBackground.SetActive(false);
+        LibrarySceneBackground.SetActive(true);
     }
 
     public void Back()
