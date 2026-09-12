@@ -1753,6 +1753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterCarousel
   content: {fileID: 2009739300}
+  SelectShipText: {fileID: 349931855}
   spacing: 425
   startX: -210
   animationDuration: 0.3

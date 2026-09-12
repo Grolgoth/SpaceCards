@@ -1,0 +1,1283 @@
+[
+{
+	"name": "Kinetic Rod",
+	"cost": 1,
+	"yield": 0.5,
+	"price": 100,
+	"type": ["attack", "projectile"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 15
+	}],
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"damage": 6
+	}],
+	"upgrade": {
+		"yield": "1",
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 20
+		}],
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"damage": 8
+		}]
+	}
+},
+{
+	"name": "Shrapmetal",
+	"cost": 1,
+	"yield": 0,
+	"price": 250,
+	"type": ["attack", "projectile"],
+	"rarity": 0,
+	"description": "Create #count projectiles (#reach). That deal #damage damage each.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 12,
+			"damage": 2,
+			"count": 4
+		}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 12,
+				"damage": 2,
+				"count": 5
+		}]
+	}
+},
+{
+	"name": "Cannonball",
+	"cost": 1,
+	"yield": 1,
+	"price": 250,
+	"type": ["attack", "projectile"],
+	"rarity": 1,
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Deals double damage against armor. **A cannon, in space?",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 12,
+			"damage": 5,
+			"modifiers": [
+				{
+				"type": "ArmorDamageMultiplier",
+				"value": 2
+				}]
+		}],
+	"upgrade": {
+		"description": "Projectile attack (#reach reach). Deal #damage damage. Deals triple damage against armor. **A cannon, in space?",
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 15,
+				"damage": 6,
+				"modifiers": [
+				{
+				"type": "ArmorDamageMultiplier",
+				"value": 3
+				}]
+		}]
+	}
+},
+{
+	"name": "Acid Bomb",
+	"cost": 2,
+	"yield": 1,
+	"price": 300,
+	"type": ["attack", "projectile", "acid"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage damage +1 for each earlier acid attack on target.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 8,
+			"damage": 10,
+			"modifiers": [
+				{
+				"type": "Acid",
+				"value": 1
+				}]
+		}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 10,
+				"damage": 12,
+				"modifiers": [
+					{
+					"type": "Acid",
+					"value": 1
+					}]
+		}]
+	}
+},
+{
+	"name": "Spirit Arrow",
+	"cost": 2,
+	"yield": 1,
+	"price": 400,
+	"type": ["attack", "projectile", "mental"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage mental damage.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 15,
+			"damage": 10,
+			"modifiers": [
+				{
+					"type": "Mental"
+				}]
+		}],
+	"upgrade":
+	{
+		"cost": 1
+	}
+},
+{
+	"name": "Mind Blast",
+	"cost": 2,
+	"yield": 2,
+	"price": 400,
+	"type": ["attack", "projectile", "mental", "area"],
+	"rarity": 1,
+	"description": "Projectile attack (#reach reach). Deal #damage mental damage to all enemies.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 20,
+			"damage": 12,
+			"modifiers": [
+				{
+					"type": "Mental"
+				},
+				{
+					"type": "Area"
+				}]
+		}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 40,
+				"damage": 15,
+				"modifiers": [
+				{
+					"type": "Mental"
+				},
+				{
+					"type": "Area"
+				}]
+		}]
+	}
+},
+{
+	"name": "Osmium Slug",
+	"cost": 2,
+	"yield": 2,
+	"price": 200,
+	"type": ["attack", "projectile"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 25,
+			"damage": 12
+		}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 30,
+				"damage": 15
+		}]
+	}
+},
+{
+	"name": "Tantalum Blast",
+	"cost": 1,
+	"yield": 1,
+	"price": 250,
+	"type": ["attack", "projectile", "area"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 15,
+			"damage": 5,
+			"modifiers": [
+				{
+					"type": "Area"
+				}]
+		}],
+	"upgrade": {
+		"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies twice.",
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 15,
+				"damage": 5,
+				"modifiers": [
+				{
+					"type": "Count",
+					"value": 2
+				},
+				{
+					"type": "Area"
+				}]
+		}]
+	}
+},
+{
+	"name": "Neutronium Blast",
+	"cost": 3,
+	"yield": 4,
+	"price": 1000,
+	"type": ["attack", "projectile", "area"],
+	"rarity": 2,
+	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 15,
+			"damage": 20,
+			"modifiers": [
+				{
+					"type": "Area"
+				}]
+		}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 20,
+				"damage": 25,
+				"modifiers": [
+				{
+					"type": "Area"
+				}]
+		}]
+	}
+},
+{
+	"name": "Asteroid Strike",
+	"cost": 2,
+	"yield": 0,
+	"price": 300,
+	"type": ["attack", "projectile"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 10,
+			"damage": 20
+		}],
+	"upgrade": {
+		"yield": 1,
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 15,
+				"damage": 20
+		}]
+	}
+},
+{
+	"name": "Fission Bomb",
+	"cost": 2,
+	"yield": 2,
+	"price": 500,
+	"type": ["attack", "projectile", "bomb"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 8,
+			"damage": 20
+		}],
+	"upgrade": {
+		"yield": 3,
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 10,
+				"damage": 20
+		}]
+	}
+},
+{
+	"name": "Comet",
+	"cost": 3,
+	"yield": 1,
+	"price": 1250,
+	"type": ["attack", "projectile"],
+	"rarity": 2,
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Deals double damage against force field.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 20,
+			"damage": 22,
+			"modifiers": [
+				{
+				"type": "DefenseDamageMultiplier",
+				"value": 2
+				}]
+		}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 30,
+				"damage": 22,
+				"modifiers": [
+				{
+				"type": "DefenseDamageMultiplier",
+				"value": 2
+				}]
+		}]
+	}
+},
+{
+	"name": "Hook",
+	"cost": 1,
+	"yield": 0,
+	"price": 800,
+	"type": ["attack", "projectile", "tether", "draw"],
+	"rarity": 1,
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Tether yourself to target. Draw #value cards if not blocked.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 5,
+			"damage": 1,
+			"modifiers": [
+				{
+					"type": "Tether"
+				},
+				{
+					"type": "Condition",
+					"name": "NotBlocked",
+					"result": [
+					{
+						"type": "DrawCard",
+						"value": 1
+					}]
+				}]
+		}],
+	"upgrade": {
+		"description": "Projectile attack (#reach reach). Deal #damage damage. Tether yourself to the target. Draw #value cards and shuffle Hook into your drawpile if not blocked.",
+		"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 5,
+			"damage": 1,
+			"modifiers": [
+				{
+					"type": "Tether"
+				},
+				{
+					"type": "Condition",
+					"name": "NotBlocked",
+					"result": [
+					{
+						"type": "DrawCard",
+						"value": 1
+					},
+					{
+						"type": "IntoDrawPile",
+						"target": "this"
+					}]
+				}]
+		}]
+	}
+},
+{
+	"name": "Thermite Rod",
+	"cost": 1,
+	"yield": 0,
+	"price": 100,
+	"type": ["attack", "projectile"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 15,
+			"damage": 8
+	}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 25,
+				"damage": 8
+		}]
+	}
+},
+{
+	"name": "Space Rock",
+	"cost": 0,
+	"yield": 0,
+	"price": 100,
+	"type": ["attack", "projectile"],
+	"rarity": 1,
+	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 10,
+			"damage": 3
+	}],
+	"upgrade": {
+		"yield": 0.5,
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 10,
+				"damage": 5
+		}]
+	}
+},
+{
+	"name": "Asteroid Storm",
+	"cost": 3,
+	"yield": 0,
+	"price": 1000,
+	"type": ["attack", "projectile"],
+	"rarity": 1,
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Splash.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 10,
+			"damage": 20,
+			"modifiers": [
+				{
+				"type": "Splash"
+				}]
+	}],
+	"upgrade": {
+		"yield": 2
+	}
+},
+{
+	"name": "Moxygen Rod",
+	"cost": 1,
+	"yield": 0,
+	"price": 100,
+	"type": ["attack", "projectile"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 15,
+			"damage": 8
+	}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 30,
+				"damage": 8
+		}]
+	}
+},
+{
+	"name": "Space Drone",
+	"cost": 3,
+	"yield": 2,
+	"price": 400,
+	"type": ["attack", "projectile"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 25,
+			"damage": 24
+	}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 30,
+				"damage": 30
+		}]
+	}
+},
+{
+	"name": "Drone Swarm",
+	"cost": 3,
+	"yield": 2,
+	"price": 1000,
+	"type": ["attack", "projectile", "area"],
+	"rarity": 1,
+	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 25,
+			"damage": 15,
+			"modifiers": [
+				{
+				"type": "Area"
+				}]
+	}],
+	"upgrade": {
+		"cost": 2,
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 30,
+				"damage": 15,
+				"modifiers": [
+					{
+					"type": "Area"
+					}]
+		}]
+	}
+},
+{
+	"name": "Quantum Bomb",
+	"cost": 3,
+	"yield": 1,
+	"price": 1250,
+	"type": ["attack", "projectile", "debuff"],
+	"rarity": 1,
+	"description": "Projectile attack (#reach reach). Target loses their force field. Then deal #damage damage.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 12,
+			"damage": 12,
+			"modifiers": [
+				{
+				"type": "NullDefense"
+				}]
+	}],
+	"upgrade": {
+		"cost": 2,
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 12,
+				"damage": 12,
+				"modifiers": [
+					{
+					"type": "NullDefense"
+					}]
+		}]
+	}
+},
+{
+	"name": "Densematter Missile",
+	"cost": 2,
+	"yield": 1,
+	"price": 700,
+	"type": ["attack", "projectile", "debuff"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Target loses #value speed",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 10,
+			"damage": 12,
+			"modifiers": [
+				{
+				"type": "Speed",
+				"value": 12
+				}]
+	}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 20,
+				"damage": 12,
+				"modifiers": [
+					{
+					"type": "Speed",
+					"value": 12
+					}]
+		}]
+	}
+},
+{
+	"name": "Relativistic Missile",
+	"cost": 4,
+	"yield": 1,
+	"price": 1500,
+	"type": ["attack", "projectile", "debuff"],
+	"rarity": 2,
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Target cannot use their force field next #duration turns",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 40,
+			"damage": 30,
+			"modifiers": [
+				{
+				"type": "NoForceField",
+				"duration": 1
+				}]
+	}],
+	"upgrade": {
+		"cost": 3
+	}
+},
+{
+	"name": "Densematter Blast",
+	"cost": 3,
+	"yield": 1,
+	"price": 1250,
+	"type": ["attack", "projectile", "area", "debuff"],
+	"rarity": 1,
+	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies. Targets lose #value speed",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 10,
+			"damage": 12,
+			"modifiers": [
+				{
+				"type": "Speed",
+				"value": 12
+				},
+				{
+				"type": "Area"
+				}]
+	}],
+	"upgrade": {
+		"yield": 2,
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 20,
+				"damage": 12,
+				"modifiers": [
+					{
+					"type": "Speed",
+					"value": 12
+					},
+					{
+					"type": "Area"
+				}]
+		}]
+	}
+},
+{
+	"name": "Shackle Drone",
+	"cost": 3,
+	"yield": 2,
+	"price": 1250,
+	"type": ["attack", "projectile", "debuff"],
+	"rarity": 1,
+	"description": "Projectile attack (#reach reach). Deal #damage damage. If not blocked, target cannot attack next turn",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 18,
+			"damage": 15,
+			"modifiers": [
+				{
+				"type": "Condition",
+				"name": "NotBlocked",
+				"result": [
+					{
+						"type": "NoAttack"
+					}]
+				}]
+	}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 25,
+				"damage": 15,
+				"modifiers": [
+					{
+					"type": "Condition",
+					"name": "NotBlocked",
+					"result": [
+						{
+							"type": "NoAttack"
+						}]
+					}]
+		}]
+	}
+},
+{
+	"name": "Sabotage Drone",
+	"cost": 3,
+	"yield": 2,
+	"price": 1000,
+	"type": ["attack", "projectile", "debuff"],
+	"rarity": 1,
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Target gains #duration ineficiency.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 20,
+			"damage": 10,
+			"modifiers": [
+				{
+				"type": "Ineficiency",
+				"duration": 2
+				}]
+	}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 20,
+				"damage": 12,
+				"modifiers": [
+					{
+					"type": "Ineficiency",
+					"duration": 3
+					}]
+		}]
+	}
+},
+{
+	"name": "Energy Drain Missile",
+	"cost": 2,
+	"yield": 1,
+	"price": 500,
+	"type": ["attack", "projectile", "debuff"],
+	"rarity": 0,
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Target gains #duration vulnerable.",
+	"effects": [
+		{
+			"type": "Nprojectile",
+			"reach": 15,
+			"damage": 12,
+			"modifiers": [
+				{
+				"type": "Vulnerable",
+				"duration": 2
+				}]
+	}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Nprojectile",
+				"reach": 15,
+				"damage": 12,
+				"modifiers": [
+					{
+					"type": "Vulnerable",
+					"duration": 3
+					}]
+		}]
+	}
+},
+{
+	"name": "Hydrogen Cloud",
+	"cost": 1,
+	"yield": 1,
+	"price": 500,
+	"type": ["attack", "debuff", "area"],
+	"rarity": 0,
+	"description": "All enemies lose #value speed for their next #duration turns.",
+	"effects": [
+		{
+			"type": "Speed",
+			"value": 5,
+			"duration": 2
+			},
+			{
+				"type": "Area"
+			}],
+	"upgrade": {
+		"cost": 0
+		}
+},
+{
+	"name": "Densematter Cloud",
+	"cost": 2,
+	"yield": 2,
+	"price": 1500,
+	"type": ["attack", "debuff", "area"],
+	"rarity": 2,
+	"description": "All enemies lose #value speed for their next #duration turns.",
+	"effects": [
+		{
+			"type": "Speed",
+			"value": 18,
+			"duration": 1
+			},
+			{
+				"type": "Area"
+			}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Speed",
+			"value": 18,
+			"duration": 2
+			},
+			{
+				"type": "Area"
+			}]
+	}
+},
+{
+	"name": "Spacetime Warp",
+	"cost": 3,
+	"yield": 1,
+	"price": 1600,
+	"type": ["attack", "area"],
+	"rarity": 2,
+	"description": "Deal #damage damage to all enemies. Draw #value cards.",
+	"effects": [
+		{
+			"type": "Damage",
+			"damage": 10
+		},
+		{
+			"type": "Area"
+		},
+		{
+			"type": "DrawCard",
+			"value": 1
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Damage",
+			"damage": 15
+		},
+		{
+			"type": "Area"
+		},
+		{
+			"type": "DrawCard",
+			"value": 1
+		}]
+	}
+},
+{
+	"name": "Magnet",
+	"cost": 2,
+	"yield": 2,
+	"price": 800,
+	"type": ["attack", "repair"],
+	"rarity": 1,
+	"description": "Deal #damage damage. Repair #value hp.",
+	"effects": [
+		{
+			"type": "Damage",
+			"damage": 7
+		},
+		{
+			"type": "Repair",
+			"value": 3
+		}],
+	"upgrade": {
+		"cost": 1,
+		"effects": [
+		{
+			"type": "Damage",
+			"reach": 10,
+			"damage": 7
+		},
+		{
+			"type": "Repair",
+			"value": 5
+		}]
+	}
+},
+{
+	"name": "Solar Flare",
+	"cost": 4,
+	"yield": 0,
+	"price": 2000,
+	"type": ["attack", "area"],
+	"rarity": 3,
+	"description": "Discard your hand. Deal #damage damage to all enemies. Deals double damage to force fields.",
+	"effects": [
+		{
+			"type": "Discard",
+			"target": "hand"
+		},
+		{
+			"type": "Damage",
+			"damage": 30
+		},
+		{
+			"type": "DefenseDamageMultiplier",
+			"value": 2
+		},
+		{
+			"type": "Area"
+		}],
+	"upgrade": {
+		"description": "Deal #damage damage to all enemies. Deals double damage to force fields.",
+		"effects": [
+		{
+			"type": "Damage",
+			"damage": 30
+		},
+		{
+			"type": "DefenseDamageMultiplier",
+			"value": 2
+		},
+		{
+			"type": "Area"
+		}]
+	}
+},
+{
+	"name": "Laser",
+	"cost": 0,
+	"yield": 1,
+	"price": 100,
+	"type": ["attack", "laser"],
+	"rarity": 0,
+	"description": "Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Damage",
+			"damage": 3
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Damage",
+			"damage": 5
+		}]
+	}
+},
+{
+	"name": "Gamma Ray",
+	"cost": 1,
+	"yield": 1,
+	"price": 100,
+	"type": ["attack", "laser"],
+	"rarity": 0,
+	"description": "Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Damage",
+			"damage": 5
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Damage",
+			"damage": 7
+		}]
+	}
+},
+{
+	"name": "Energy Beam",
+	"cost": 2,
+	"yield": 1,
+	"price": 400,
+	"type": ["attack", "laser"],
+	"rarity": 0,
+	"description": "Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Damage",
+			"damage": 12
+		}],
+	"upgrade": {
+		"yield": 2,
+		"effects": [
+		{
+			"type": "Damage",
+			"damage": 15
+		}]
+	}
+},
+{
+	"name": "Hyper Beam",
+	"cost": 3,
+	"yield": 1,
+	"price": 700,
+	"type": ["attack", "laser"],
+	"rarity": 1,
+	"description": "Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Damage",
+			"damage": 20
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Damage",
+			"damage": 25
+		}]
+	}
+},
+{
+	"name": "Molecular Disintegration Ray",
+	"cost": 2,
+	"yield": 2,
+	"price": 800,
+	"type": ["attack", "laser"],
+	"rarity": 1,
+	"description": "Deal damage equal to your force field. Lose 20% of your forcefield.",
+	"effects": [
+		{
+			"type": "ForceFieldDamage"
+		},
+		{
+			"type": "LoseForceField",
+			"value": "0.2 $forcefield"
+		}],
+	"upgrade": {
+		"description": "Deal damage equal to your force field. Lose 10% of your forcefield.",
+		"effects": [
+			{
+				"type": "ForceFieldDamage"
+			},
+			{
+				"type": "LoseForceField",
+				"value": "0.1 $forcefield"
+			}]
+	}
+},
+{
+	"name": "Claw",
+	"cost": 1,
+	"yield": 0.5,
+	"price": 400,
+	"type": ["attack", "0-distance", "tether"],
+	"rarity": 0,
+	"description": "0-distance attack. Deal #damage damage. Tether yourself to target.",
+	"effects": [
+		{
+			"type": "Damage",
+			"reach": 0,
+			"damage": 10
+		},
+		{
+			"type": "Tether"
+		}],
+	"upgrade": {
+		"cost": 0
+	}
+},
+{
+	"name": "Board",
+	"cost": 0,
+	"yield": 1,
+	"price": 200,
+	"type": ["attack", "0-distance"],
+	"rarity": 0,
+	"description": "0-distance attack. Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Damage",
+			"reach": 0,
+			"damage": 5
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Damage",
+			"reach": 0,
+			"damage": 7
+		}]
+	}
+},
+{
+	"name": "Magnetic Shear",
+	"cost": 2,
+	"yield": 1,
+	"price": 250,
+	"type": ["attack", "0-distance"],
+	"rarity": 0,
+	"description": "0-distance attack. Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Damage",
+			"reach": 0,
+			"damage": 18
+		}],
+	"upgrade": {
+		"yield": 2,
+		"effects": [
+		{
+			"type": "Damage",
+			"reach": 0,
+			"damage": 20
+		}]
+	}
+},
+{
+	"name": "Plasma Torch",
+	"cost": 3,
+	"yield": 0,
+	"price": 500,
+	"type": ["attack", "0-distance"],
+	"rarity": 1,
+	"description": "0-distance attack. Deal #damage damage.",
+	"effects": [
+		{
+			"type": "Damage",
+			"reach": 0,
+			"damage": 30
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Damage",
+			"reach": 0,
+			"damage": 40
+		}]
+	}
+},
+{
+	"name": "Secret Agent",
+	"cost": 2,
+	"yield": 1,
+	"price": 1500,
+	"type": ["attack", "0-distance", "debuff"],
+	"rarity": 2,
+	"description": "0-distance attack. Target gains #duration inefficiency. Whenever you are within #distance knots of target, target gains 1 inefficiency",
+	"playconditions": [
+		{
+			"type": "distance",
+			"reach": 0
+		}],
+	"effects": [
+		{
+			"type": "Ineficiency",
+			"duration": 2
+		},
+		{
+			"type": "Secret Agent",
+			"distance": 10
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Ineficiency",
+			"duration": 3
+		},
+		{
+			"type": "Secret Agent",
+			"distance": 15
+		}]
+	}
+},
+{
+	"name": "Energy Leech",
+	"cost": 2,
+	"yield": 2,
+	"price": 1000,
+	"type": ["attack", "0-distance"],
+	"rarity": 1,
+	"description": "0-distance attack. Target loses #value defense. Gain defense equal to target defense lost.",
+	"playconditions": [
+		{
+			"type": "distance",
+			"reach": 0
+		}],
+	"effects": [
+		{
+			"type": "DefenseLeech",
+			"value": 10
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "DefenseLeech",
+			"value": 15
+		}]
+	}
+},
+{
+	"name": "Saboteur",
+	"cost": 2,
+	"yield": 1,
+	"price": 1500,
+	"type": ["attack", "0-distance", "debuff"],
+	"rarity": 2,
+	"description": "0-distance attack. Choose 1: Disable target forcefield this turn / Disable target armor.",
+	"playconditions": [
+		{
+			"type": "distance",
+			"reach": 0
+		}],
+	"effects": [
+		{
+			"type": "ChooseOne",
+			"choices": [
+			{
+				"type": "LoseForceField"
+			},
+			{
+				"type": "LoseArmor"
+			}]
+		}],
+	"upgrade": {
+		"description": "0-distance attack. Choose 1: Disable target forcefield this turn / Disable target armor. Then deal #damage damage.",
+		"effects": [
+		{
+			"type": "ChooseOne",
+			"choices": [
+			{
+				"type": "LoseForceField"
+			},
+			{
+				"type": "LoseArmor"
+			}]
+		},
+		{
+			"type": "Damage",
+			"damage": 8
+		}]
+	}
+},
+{
+	"name": "Spy",
+	"cost": 1,
+	"yield": 1,
+	"price": 1000,
+	"type": ["attack", "0-distance", "debuff"],
+	"rarity": 1,
+	"description": "0-distance attack. Target loses random drive next turn.",
+	"playconditions": [
+		{
+			"type": "distance",
+			"reach": 0
+		}],
+	"effects": [
+		{
+			"type": "DisableDrive",
+			"drive": "random"
+		}],
+	"upgrade": {
+		"description": "0-distance attack. Choose a drive which will be disabled next turn.",
+		"effects": [
+		{
+			"type": "DisableDrive",
+			"drive": "choice"
+		}]
+	}
+}
+]
