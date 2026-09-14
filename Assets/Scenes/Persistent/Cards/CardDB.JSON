@@ -4,7 +4,7 @@
 	"cost": 1,
 	"yield": 0.5,
 	"price": 100,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage damage.",
 	"playconditions": [
@@ -36,13 +36,17 @@
 	"cost": 1,
 	"yield": 0,
 	"price": 250,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 0,
 	"description": "Create #count projectiles (#reach). That deal #damage damage each.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 12
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 12,
 			"damage": 2,
 			"count": 4
 		}],
@@ -50,7 +54,6 @@
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 12,
 				"damage": 2,
 				"count": 5
 		}]
@@ -61,13 +64,17 @@
 	"cost": 1,
 	"yield": 1,
 	"price": 250,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 1,
 	"description": "Projectile attack (#reach reach). Deal #damage damage. Deals double damage against armor. **A cannon, in space?",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 12
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 12,
 			"damage": 5,
 			"modifiers": [
 				{
@@ -77,10 +84,14 @@
 		}],
 	"upgrade": {
 		"description": "Projectile attack (#reach reach). Deal #damage damage. Deals triple damage against armor. **A cannon, in space?",
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 15
+		}],
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 15,
 				"damage": 6,
 				"modifiers": [
 				{
@@ -95,13 +106,17 @@
 	"cost": 2,
 	"yield": 1,
 	"price": 300,
-	"type": ["attack", "projectile", "acid"],
+	"type": ["attack", "projectile", "acid", "bomb", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage damage +1 for each earlier acid attack on target.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 8
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 8,
 			"damage": 10,
 			"modifiers": [
 				{
@@ -110,10 +125,14 @@
 				}]
 		}],
 	"upgrade": {
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 10
+		}],
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 10,
 				"damage": 12,
 				"modifiers": [
 					{
@@ -128,13 +147,17 @@
 	"cost": 2,
 	"yield": 1,
 	"price": 400,
-	"type": ["attack", "projectile", "mental"],
+	"type": ["attack", "projectile", "mental", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage mental damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 15
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 15,
 			"damage": 10,
 			"modifiers": [
 				{
@@ -151,13 +174,17 @@
 	"cost": 2,
 	"yield": 2,
 	"price": 400,
-	"type": ["attack", "projectile", "mental", "area"],
+	"type": ["attack", "projectile", "mental", "area", "offensive"],
 	"rarity": 1,
 	"description": "Projectile attack (#reach reach). Deal #damage mental damage to all enemies.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 20
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 20,
 			"damage": 12,
 			"modifiers": [
 				{
@@ -168,10 +195,14 @@
 				}]
 		}],
 	"upgrade": {
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 40
+		}],
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 40,
 				"damage": 15,
 				"modifiers": [
 				{
@@ -188,20 +219,28 @@
 	"cost": 2,
 	"yield": 2,
 	"price": 200,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 25
+	}],
 	"effects": [
 		{
-			"type": "Nprojectile",
-			"reach": 25,
-			"damage": 12
-		}],
+		"type": "Nprojectile",
+		"damage": 12
+	}],
 	"upgrade": {
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 30
+		}],
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 30,
 				"damage": 15
 		}]
 	}
@@ -211,13 +250,17 @@
 	"cost": 1,
 	"yield": 1,
 	"price": 250,
-	"type": ["attack", "projectile", "area"],
+	"type": ["attack", "projectile", "area", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 15
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 15,
 			"damage": 5,
 			"modifiers": [
 				{
@@ -229,7 +272,6 @@
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 15,
 				"damage": 5,
 				"modifiers": [
 				{
@@ -247,13 +289,17 @@
 	"cost": 3,
 	"yield": 4,
 	"price": 1000,
-	"type": ["attack", "projectile", "area"],
+	"type": ["attack", "projectile", "area", "offensive"],
 	"rarity": 2,
 	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 15
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 15,
 			"damage": 20,
 			"modifiers": [
 				{
@@ -261,10 +307,14 @@
 				}]
 		}],
 	"upgrade": {
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 20
+		}],
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 20,
 				"damage": 25,
 				"modifiers": [
 				{
@@ -278,22 +328,25 @@
 	"cost": 2,
 	"yield": 0,
 	"price": 300,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 10
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 10,
 			"damage": 20
 		}],
 	"upgrade": {
 		"yield": 1,
-		"effects": [
-			{
-				"type": "Nprojectile",
-				"reach": 15,
-				"damage": 20
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 15
 		}]
 	}
 },
@@ -302,22 +355,25 @@
 	"cost": 2,
 	"yield": 2,
 	"price": 500,
-	"type": ["attack", "projectile", "bomb"],
+	"type": ["attack", "projectile", "bomb", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 8
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 8,
 			"damage": 20
 		}],
 	"upgrade": {
 		"yield": 3,
-		"effects": [
-			{
-				"type": "Nprojectile",
-				"reach": 10,
-				"damage": 20
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 10
 		}]
 	}
 },
@@ -326,13 +382,17 @@
 	"cost": 3,
 	"yield": 1,
 	"price": 1250,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 2,
 	"description": "Projectile attack (#reach reach). Deal #damage damage. Deals double damage against force field.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 20
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 20,
 			"damage": 22,
 			"modifiers": [
 				{
@@ -341,16 +401,10 @@
 				}]
 		}],
 	"upgrade": {
-		"effects": [
-			{
-				"type": "Nprojectile",
-				"reach": 30,
-				"damage": 22,
-				"modifiers": [
-				{
-				"type": "DefenseDamageMultiplier",
-				"value": 2
-				}]
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 30
 		}]
 	}
 },
@@ -359,13 +413,17 @@
 	"cost": 1,
 	"yield": 0,
 	"price": 800,
-	"type": ["attack", "projectile", "tether", "draw"],
+	"type": ["attack", "projectile", "tether", "draw", "offensive"],
 	"rarity": 1,
-	"description": "Projectile attack (#reach reach). Deal #damage damage. Tether yourself to target. Draw #value cards if not blocked.",
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Tether yourself to target. Draw #cards cards if not blocked.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 5
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 5,
 			"damage": 1,
 			"modifiers": [
 				{
@@ -376,17 +434,16 @@
 					"name": "NotBlocked",
 					"result": [
 					{
-						"type": "DrawCard",
-						"value": 1
+						"type": "Draw",
+						"cards": 1
 					}]
 				}]
 		}],
 	"upgrade": {
-		"description": "Projectile attack (#reach reach). Deal #damage damage. Tether yourself to the target. Draw #value cards and shuffle Hook into your drawpile if not blocked.",
+		"description": "Projectile attack (#reach reach). Deal #damage damage. Tether yourself to the target. Draw #cards cards and shuffle Hook into your drawpile if not blocked.",
 		"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 5,
 			"damage": 1,
 			"modifiers": [
 				{
@@ -397,8 +454,8 @@
 					"name": "NotBlocked",
 					"result": [
 					{
-						"type": "DrawCard",
-						"value": 1
+						"type": "Draw",
+						"cards": 1
 					},
 					{
 						"type": "IntoDrawPile",
@@ -413,21 +470,24 @@
 	"cost": 1,
 	"yield": 0,
 	"price": 100,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 15
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 15,
 			"damage": 8
 	}],
 	"upgrade": {
-		"effects": [
-			{
-				"type": "Nprojectile",
-				"reach": 25,
-				"damage": 8
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 25
 		}]
 	}
 },
@@ -436,13 +496,17 @@
 	"cost": 0,
 	"yield": 0,
 	"price": 100,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 1,
 	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 10
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 10,
 			"damage": 3
 	}],
 	"upgrade": {
@@ -450,7 +514,6 @@
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 10,
 				"damage": 5
 		}]
 	}
@@ -460,13 +523,17 @@
 	"cost": 3,
 	"yield": 0,
 	"price": 1000,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 1,
 	"description": "Projectile attack (#reach reach). Deal #damage damage. Splash.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 10
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 10,
 			"damage": 20,
 			"modifiers": [
 				{
@@ -482,21 +549,24 @@
 	"cost": 1,
 	"yield": 0,
 	"price": 100,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 15
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 15,
 			"damage": 8
 	}],
 	"upgrade": {
-		"effects": [
-			{
-				"type": "Nprojectile",
-				"reach": 30,
-				"damage": 8
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 30
 		}]
 	}
 },
@@ -505,20 +575,28 @@
 	"cost": 3,
 	"yield": 2,
 	"price": 400,
-	"type": ["attack", "projectile"],
+	"type": ["attack", "projectile", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 25
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 25,
 			"damage": 24
 	}],
 	"upgrade": {
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 30
+		}],
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 30,
 				"damage": 30
 		}]
 	}
@@ -528,13 +606,17 @@
 	"cost": 3,
 	"yield": 2,
 	"price": 1000,
-	"type": ["attack", "projectile", "area"],
+	"type": ["attack", "projectile", "area", "offensive"],
 	"rarity": 1,
 	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 25
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 25,
 			"damage": 15,
 			"modifiers": [
 				{
@@ -543,15 +625,10 @@
 	}],
 	"upgrade": {
 		"cost": 2,
-		"effects": [
-			{
-				"type": "Nprojectile",
-				"reach": 30,
-				"damage": 15,
-				"modifiers": [
-					{
-					"type": "Area"
-					}]
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 30
 		}]
 	}
 },
@@ -560,13 +637,17 @@
 	"cost": 3,
 	"yield": 1,
 	"price": 1250,
-	"type": ["attack", "projectile", "debuff"],
+	"type": ["attack", "projectile", "debuff", "offensive", "bomb"],
 	"rarity": 1,
 	"description": "Projectile attack (#reach reach). Target loses their force field. Then deal #damage damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 12
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 12,
 			"damage": 12,
 			"modifiers": [
 				{
@@ -574,17 +655,7 @@
 				}]
 	}],
 	"upgrade": {
-		"cost": 2,
-		"effects": [
-			{
-				"type": "Nprojectile",
-				"reach": 12,
-				"damage": 12,
-				"modifiers": [
-					{
-					"type": "NullDefense"
-					}]
-		}]
+		"cost": 2
 	}
 },
 {
@@ -592,31 +663,29 @@
 	"cost": 2,
 	"yield": 1,
 	"price": 700,
-	"type": ["attack", "projectile", "debuff"],
+	"type": ["attack", "projectile", "debuff", "offensive"],
 	"rarity": 0,
-	"description": "Projectile attack (#reach reach). Deal #damage damage. Target loses #value speed",
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Target loses #speed speed",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 10
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 10,
 			"damage": 12,
 			"modifiers": [
 				{
-				"type": "Speed",
-				"value": 12
+				"type": "LoseSpeed",
+				"speed": 12
 				}]
 	}],
 	"upgrade": {
-		"effects": [
-			{
-				"type": "Nprojectile",
-				"reach": 20,
-				"damage": 12,
-				"modifiers": [
-					{
-					"type": "Speed",
-					"value": 12
-					}]
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 20
 		}]
 	}
 },
@@ -625,13 +694,17 @@
 	"cost": 4,
 	"yield": 1,
 	"price": 1500,
-	"type": ["attack", "projectile", "debuff"],
+	"type": ["attack", "projectile", "debuff", "offensive"],
 	"rarity": 2,
-	"description": "Projectile attack (#reach reach). Deal #damage damage. Target cannot use their force field next #duration turns",
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Target cannot use their force field for #duration turns",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 40
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 40,
 			"damage": 30,
 			"modifiers": [
 				{
@@ -648,18 +721,22 @@
 	"cost": 3,
 	"yield": 1,
 	"price": 1250,
-	"type": ["attack", "projectile", "area", "debuff"],
+	"type": ["attack", "projectile", "area", "debuff", "offensive"],
 	"rarity": 1,
-	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies. Targets lose #value speed",
+	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies. Targets lose #speed speed",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 10
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 10,
 			"damage": 12,
 			"modifiers": [
 				{
-				"type": "Speed",
-				"value": 12
+				"type": "LoseSpeed",
+				"speed": 12
 				},
 				{
 				"type": "Area"
@@ -667,19 +744,10 @@
 	}],
 	"upgrade": {
 		"yield": 2,
-		"effects": [
-			{
-				"type": "Nprojectile",
-				"reach": 20,
-				"damage": 12,
-				"modifiers": [
-					{
-					"type": "Speed",
-					"value": 12
-					},
-					{
-					"type": "Area"
-				}]
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 20
 		}]
 	}
 },
@@ -688,13 +756,17 @@
 	"cost": 3,
 	"yield": 2,
 	"price": 1250,
-	"type": ["attack", "projectile", "debuff"],
+	"type": ["attack", "projectile", "debuff", "offensive"],
 	"rarity": 1,
 	"description": "Projectile attack (#reach reach). Deal #damage damage. If not blocked, target cannot attack next turn",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 18
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 18,
 			"damage": 15,
 			"modifiers": [
 				{
@@ -707,20 +779,10 @@
 				}]
 	}],
 	"upgrade": {
-		"effects": [
-			{
-				"type": "Nprojectile",
-				"reach": 25,
-				"damage": 15,
-				"modifiers": [
-					{
-					"type": "Condition",
-					"name": "NotBlocked",
-					"result": [
-						{
-							"type": "NoAttack"
-						}]
-					}]
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 25
 		}]
 	}
 },
@@ -729,13 +791,17 @@
 	"cost": 3,
 	"yield": 2,
 	"price": 1000,
-	"type": ["attack", "projectile", "debuff"],
+	"type": ["attack", "projectile", "debuff", "offensive"],
 	"rarity": 1,
 	"description": "Projectile attack (#reach reach). Deal #damage damage. Target gains #duration ineficiency.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 20
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 20,
 			"damage": 10,
 			"modifiers": [
 				{
@@ -747,7 +813,6 @@
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 20,
 				"damage": 12,
 				"modifiers": [
 					{
@@ -762,13 +827,17 @@
 	"cost": 2,
 	"yield": 1,
 	"price": 500,
-	"type": ["attack", "projectile", "debuff"],
+	"type": ["attack", "projectile", "debuff", "offensive"],
 	"rarity": 0,
 	"description": "Projectile attack (#reach reach). Deal #damage damage. Target gains #duration vulnerable.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 15
+	}],
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"reach": 15,
 			"damage": 12,
 			"modifiers": [
 				{
@@ -780,7 +849,6 @@
 		"effects": [
 			{
 				"type": "Nprojectile",
-				"reach": 15,
 				"damage": 12,
 				"modifiers": [
 					{
@@ -795,13 +863,13 @@
 	"cost": 1,
 	"yield": 1,
 	"price": 500,
-	"type": ["attack", "debuff", "area"],
+	"type": ["debuff", "area", "offensive"],
 	"rarity": 0,
-	"description": "All enemies lose #value speed for their next #duration turns.",
+	"description": "All enemies lose #speed speed for #duration turns.",
 	"effects": [
 		{
-			"type": "Speed",
-			"value": 5,
+			"type": "LoseSpeed",
+			"speed": 5,
 			"duration": 2
 			},
 			{
@@ -816,13 +884,13 @@
 	"cost": 2,
 	"yield": 2,
 	"price": 1500,
-	"type": ["attack", "debuff", "area"],
+	"type": ["debuff", "area", "offensive"],
 	"rarity": 2,
-	"description": "All enemies lose #value speed for their next #duration turns.",
+	"description": "All enemies lose #speed speed for #duration turns.",
 	"effects": [
 		{
-			"type": "Speed",
-			"value": 18,
+			"type": "LoseSpeed",
+			"speed": 18,
 			"duration": 1
 			},
 			{
@@ -831,8 +899,8 @@
 	"upgrade": {
 		"effects": [
 		{
-			"type": "Speed",
-			"value": 18,
+			"type": "LoseSpeed",
+			"speed": 18,
 			"duration": 2
 			},
 			{
@@ -845,9 +913,9 @@
 	"cost": 3,
 	"yield": 1,
 	"price": 1600,
-	"type": ["attack", "area"],
+	"type": ["attack", "area", "offensive", "draw"],
 	"rarity": 2,
-	"description": "Deal #damage damage to all enemies. Draw #value cards.",
+	"description": "Deal #damage damage to all enemies. Draw #cards cards.",
 	"effects": [
 		{
 			"type": "Damage",
@@ -857,8 +925,8 @@
 			"type": "Area"
 		},
 		{
-			"type": "DrawCard",
-			"value": 1
+			"type": "Draw",
+			"cards": 1
 		}],
 	"upgrade": {
 		"effects": [
@@ -870,8 +938,8 @@
 			"type": "Area"
 		},
 		{
-			"type": "DrawCard",
-			"value": 1
+			"type": "Draw",
+			"cards": 1
 		}]
 	}
 },
@@ -880,9 +948,14 @@
 	"cost": 2,
 	"yield": 2,
 	"price": 800,
-	"type": ["attack", "repair"],
+	"type": ["attack", "repair", "offensive", "buff", "defensive"],
 	"rarity": 1,
 	"description": "Deal #damage damage. Repair #value hp.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 8
+	}],
 	"effects": [
 		{
 			"type": "Damage",
@@ -894,10 +967,14 @@
 		}],
 	"upgrade": {
 		"cost": 1,
+		"playconditions": [
+		{
+			"type": "distance",
+			"reach": 10
+		}],
 		"effects": [
 		{
 			"type": "Damage",
-			"reach": 10,
 			"damage": 7
 		},
 		{
@@ -911,7 +988,7 @@
 	"cost": 4,
 	"yield": 0,
 	"price": 2000,
-	"type": ["attack", "area"],
+	"type": ["attack", "area", "offensive"],
 	"rarity": 3,
 	"description": "Discard your hand. Deal #damage damage to all enemies. Deals double damage to force fields.",
 	"effects": [
@@ -951,7 +1028,7 @@
 	"cost": 0,
 	"yield": 1,
 	"price": 100,
-	"type": ["attack", "laser"],
+	"type": ["attack", "laser", "offensive"],
 	"rarity": 0,
 	"description": "Deal #damage damage.",
 	"effects": [
@@ -972,7 +1049,7 @@
 	"cost": 1,
 	"yield": 1,
 	"price": 100,
-	"type": ["attack", "laser"],
+	"type": ["attack", "laser", "offensive"],
 	"rarity": 0,
 	"description": "Deal #damage damage.",
 	"effects": [
@@ -993,7 +1070,7 @@
 	"cost": 2,
 	"yield": 1,
 	"price": 400,
-	"type": ["attack", "laser"],
+	"type": ["attack", "laser", "offensive"],
 	"rarity": 0,
 	"description": "Deal #damage damage.",
 	"effects": [
@@ -1015,7 +1092,7 @@
 	"cost": 3,
 	"yield": 1,
 	"price": 700,
-	"type": ["attack", "laser"],
+	"type": ["attack", "laser", "offensive"],
 	"rarity": 1,
 	"description": "Deal #damage damage.",
 	"effects": [
@@ -1036,7 +1113,7 @@
 	"cost": 2,
 	"yield": 2,
 	"price": 800,
-	"type": ["attack", "laser"],
+	"type": ["attack", "laser", "offensive"],
 	"rarity": 1,
 	"description": "Deal damage equal to your force field. Lose 20% of your forcefield.",
 	"effects": [
@@ -1045,7 +1122,8 @@
 		},
 		{
 			"type": "LoseForceField",
-			"value": "0.2 $forcefield"
+			"value": "0.2 $forcefield",
+			"target": "self"
 		}],
 	"upgrade": {
 		"description": "Deal damage equal to your force field. Lose 10% of your forcefield.",
@@ -1055,7 +1133,8 @@
 			},
 			{
 				"type": "LoseForceField",
-				"value": "0.1 $forcefield"
+				"value": "0.1 $forcefield",
+				"target": "self"
 			}]
 	}
 },
@@ -1064,13 +1143,17 @@
 	"cost": 1,
 	"yield": 0.5,
 	"price": 400,
-	"type": ["attack", "0-distance", "tether"],
+	"type": ["attack", "0-distance", "tether", "offensive"],
 	"rarity": 0,
 	"description": "0-distance attack. Deal #damage damage. Tether yourself to target.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 0
+	}],
 	"effects": [
 		{
 			"type": "Damage",
-			"reach": 0,
 			"damage": 10
 		},
 		{
@@ -1085,20 +1168,23 @@
 	"cost": 0,
 	"yield": 1,
 	"price": 200,
-	"type": ["attack", "0-distance"],
+	"type": ["attack", "0-distance", "offensive"],
 	"rarity": 0,
 	"description": "0-distance attack. Deal #damage damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 0
+	}],
 	"effects": [
 		{
 			"type": "Damage",
-			"reach": 0,
 			"damage": 5
 		}],
 	"upgrade": {
 		"effects": [
 		{
 			"type": "Damage",
-			"reach": 0,
 			"damage": 7
 		}]
 	}
@@ -1108,13 +1194,17 @@
 	"cost": 2,
 	"yield": 1,
 	"price": 250,
-	"type": ["attack", "0-distance"],
+	"type": ["attack", "0-distance", "offensive"],
 	"rarity": 0,
 	"description": "0-distance attack. Deal #damage damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 0
+	}],
 	"effects": [
 		{
 			"type": "Damage",
-			"reach": 0,
 			"damage": 18
 		}],
 	"upgrade": {
@@ -1122,7 +1212,6 @@
 		"effects": [
 		{
 			"type": "Damage",
-			"reach": 0,
 			"damage": 20
 		}]
 	}
@@ -1132,20 +1221,23 @@
 	"cost": 3,
 	"yield": 0,
 	"price": 500,
-	"type": ["attack", "0-distance"],
+	"type": ["attack", "0-distance", "offensive"],
 	"rarity": 1,
 	"description": "0-distance attack. Deal #damage damage.",
+	"playconditions": [
+	{
+		"type": "distance",
+		"reach": 0
+	}],
 	"effects": [
 		{
 			"type": "Damage",
-			"reach": 0,
 			"damage": 30
 		}],
 	"upgrade": {
 		"effects": [
 		{
 			"type": "Damage",
-			"reach": 0,
 			"damage": 40
 		}]
 	}
@@ -1155,7 +1247,7 @@
 	"cost": 2,
 	"yield": 1,
 	"price": 1500,
-	"type": ["attack", "0-distance", "debuff"],
+	"type": ["0-distance", "debuff", "offensive"],
 	"rarity": 2,
 	"description": "0-distance attack. Target gains #duration inefficiency. Whenever you are within #distance knots of target, target gains 1 inefficiency",
 	"playconditions": [
@@ -1169,8 +1261,16 @@
 			"duration": 2
 		},
 		{
-			"type": "Secret Agent",
-			"distance": 10
+			"type": "Condition",
+			"condition": "DistanceToTarget",
+			"distance": 10,
+			"repeat": ["turn"],
+			"startdelay": 1,
+			"result": [
+			{
+				"type": "Ineficiency",
+				"duration": 1
+			}]
 		}],
 	"upgrade": {
 		"effects": [
@@ -1189,7 +1289,7 @@
 	"cost": 2,
 	"yield": 2,
 	"price": 1000,
-	"type": ["attack", "0-distance"],
+	"type": ["offensive", "0-distance", "defensive"],
 	"rarity": 1,
 	"description": "0-distance attack. Target loses #value defense. Gain defense equal to target defense lost.",
 	"playconditions": [
@@ -1215,7 +1315,7 @@
 	"cost": 2,
 	"yield": 1,
 	"price": 1500,
-	"type": ["attack", "0-distance", "debuff"],
+	"type": ["0-distance", "debuff", "offensive"],
 	"rarity": 2,
 	"description": "0-distance attack. Choose 1: Disable target forcefield this turn / Disable target armor.",
 	"playconditions": [
@@ -1235,6 +1335,7 @@
 			}]
 		}],
 	"upgrade": {
+		"type": ["attack", "0-distance", "debuff", "offensive"],
 		"description": "0-distance attack. Choose 1: Disable target forcefield this turn / Disable target armor. Then deal #damage damage.",
 		"effects": [
 		{
@@ -1258,7 +1359,7 @@
 	"cost": 1,
 	"yield": 1,
 	"price": 1000,
-	"type": ["attack", "0-distance", "debuff"],
+	"type": ["0-distance", "debuff", "offensive"],
 	"rarity": 1,
 	"description": "0-distance attack. Target loses random drive next turn.",
 	"playconditions": [
@@ -1277,6 +1378,1445 @@
 		{
 			"type": "DisableDrive",
 			"drive": "choice"
+		}]
+	}
+},
+{
+	"name": "Heat Wave",
+	"cost": 2,
+	"yield": 1,
+	"price": 1000,
+	"type": ["attack", "0-distance", "debuff", "offensive"],
+	"rarity": 2,
+	"description": "0-distance attack. Target loses #speed speed. Target loses #armor armor. Then deal #damage damage. Target gains #duration ineficiency.",
+	"playconditions": [
+		{
+			"type": "distance",
+			"reach": 0
+		}],
+	"effects": [
+		{
+			"type": "Damage",
+			"damage": "6"
+		},
+		{
+			"type": "LoseSpeed",
+			"speed": 5
+		},
+		{
+			"type": "LoseArmor",
+			"armor": 5
+		},
+		{
+			"type": "Ineficiency",
+			"duration": 1
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "LoseSpeed",
+			"speed": 5
+		},
+		{
+			"type": "LoseArmor",
+			"armor": 8
+		},
+		{
+			"type": "Ineficiency",
+			"duration": 1
+		},
+		{
+			"type": "Damage",
+			"damage": "8"
+		}]
+	}
+},
+{
+	"name": "Liquid Helium Torch",
+	"cost": 1,
+	"yield": 1,
+	"price": 300,
+	"type": ["attack", "0-distance", "debuff", "offensive"],
+	"rarity": 0,
+	"description": "0-distance attack. Deal #damage damage. Target loses #speed speed",
+	"playconditions": [
+		{
+			"type": "distance",
+			"reach": 0
+		}],
+	"effects": [
+		{
+			"type": "Damage",
+			"damage": "6"
+		},
+		{
+			"type": "LoseSpeed",
+			"speed": 10
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Damage",
+			"damage": "8"
+		},
+		{
+			"type": "LoseSpeed",
+			"speed": 10
+		}]
+	}
+},
+{
+	"name": "Ioniser",
+	"cost": 2,
+	"yield": 1,
+	"price": 300,
+	"type": ["attack", "0-distance", "debuff", "offensive"],
+	"rarity": 0,
+	"description": "0-distance attack. Deal #damage damage. If not blocked, target loses random drive next turn.",
+	"playconditions": [
+		{
+			"type": "distance",
+			"reach": 0
+		}],
+	"effects": [
+		{
+			"type": "Damage",
+			"damage": "6"
+		},
+		{
+			"type": "Condition",
+			"name": "NotBlocked",
+			"result": [
+			{
+				"type": "DisableDrive",
+				"drive": "random"
+			}]
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Damage",
+			"damage": "10"
+		},
+		{
+			"type": "Condition",
+			"name": "NotBlocked",
+			"result": [
+			{
+				"type": "DisableDrive",
+				"drive": "random"
+			}]
+		}]
+	}
+},
+{
+	"name": "Liquid Krypton Lance",
+	"cost": 2,
+	"yield": 2,
+	"price": 500,
+	"type": ["attack", "0-distance", "debuff", "offensive"],
+	"rarity": 1,
+	"description": "0-distance attack. Deal #damage damage. Target loses #speed speed. Target gains #weakness weakness.",
+	"playconditions": [
+		{
+			"type": "distance",
+			"reach": 0
+		}],
+	"effects": [
+		{
+			"type": "Damage",
+			"damage": "15"
+		},
+		{
+			"type": "LoseSpeed",
+			"speed": 5
+		},
+		{
+			"type": "Weakness",
+			"weakness": 1
+		}],
+	"upgrade": {
+		"effects": [
+			{
+				"type": "Damage",
+				"damage": "15"
+			},
+			{
+				"type": "LoseSpeed",
+				"speed": 5
+			},
+			{
+				"type": "Weakness",
+				"weakness": 2
+			}]
+	}
+},
+{
+	"name": "Hacker",
+	"cost": 3,
+	"yield": 1,
+	"price": 1250,
+	"type": ["offensive", "0-distance", "debuff"],
+	"rarity": 2,
+	"description": "0-distance attack. Take control of random drive while within #distance distance of target.",
+	"playconditions": [
+		{
+			"type": "distance",
+			"reach": 0
+		}],
+	"effects": [
+		{
+			"type": "Condition",
+			"name": "WhileWithinDistance",
+			"distance": 10,
+			"result": [
+			{
+				"type": "ControlDrive",
+				"drive": "random"
+			}]
+		}],
+	"upgrade": {
+		"description": "0-distance attack. Take control of target drive while within #distance distance of target.",
+		"effects": [
+		{
+			"type": "Condition",
+			"name": "WhileWithinDistance",
+			"distance": 10,
+			"result": [
+			{
+				"type": "ControlDrive",
+				"drive": "choice"
+			}]
+		}]
+	}	
+},
+{
+	"name": "Trojan Card",
+	"cost": 3,
+	"yield": 1,
+	"price": 2500,
+	"type": ["offensive", "0-distance", "debuff"],
+	"rarity": 3,
+	"description": "0-distance attack. Give an attack card from your discard pile to the target. Target will play this card at the beginning of every turn against a random enemy (excluding itself).",
+	"playconditions": [
+		{
+			"type": "distance",
+			"reach": 0
+		}],
+	"effects": [
+		{
+			"type": "Trojan Card"
+		}],
+	"upgrade": {
+		"cost": 2
+	}
+},
+{
+	"name": "Attack-Inator",
+	"cost": 3,
+	"yield": 3,
+	"price": 3000,
+	"type": ["offensive", "0-distance", "playcard"],
+	"rarity": 3,
+	"description": "Play all 0 cost attacks in your draw pile at random targets",
+	"effects": [
+		{
+			"type": "PlayCard",
+			"tags":
+			{
+				"cost": 0,
+				"type": "attack"
+			},
+			"source": "drawpile",
+			"cards": "all"
+		}],
+	"upgrade": {
+		"cost": 2
+	}
+},
+{
+	"name": "Attack Phase",
+	"cost": "X",
+	"yield": 0,
+	"price": 1500,
+	"type": ["offensive", "cost-X", "playcard"],
+	"rarity": 2,
+	"description": "Launch X attack cards from your hand at random targets.",
+	"effects": [
+		{
+			"type": "PlayCard",
+			"tags":
+			{
+				"type": "attack"
+			},
+			"source": "hand",
+			"cards": "X"
+		}],
+	"upgrade": {
+		"yield": 1,
+		"description": "Launch X attack cards from your hand and drawpile at random targets.",
+		"effects": [
+		{
+			"type": "PlayCard",
+			"tags":
+			{
+				"type": "attack"
+			},
+			"sources": ["hand", "drawpile"],
+			"cards": "X"
+		}]
+	}
+},
+{
+	"name": "Reckless Attack",
+	"cost": 3,
+	"yield": 0,
+	"price": 750,
+	"type": ["offensive", "playcard"],
+	"rarity": 1,
+	"description": "Launch #cards random attacks from your draw pile at random targets.",
+	"effects": [
+		{
+			"type": "PlayCard",
+			"tags":
+			{
+				"type": "attack"
+			},
+			"source": "drawpile",
+			"cards": "2"
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "PlayCard",
+			"tags":
+			{
+				"type": "attack"
+			},
+			"source": "drawpile",
+			"cards": "3"
+		}]
+	}
+	
+},
+{
+	"name": "Hypershield",
+	"cost": 2,
+	"yield": 2,
+	"price": 2000,
+	"type": ["defensive", "buff"],
+	"rarity": 2,
+	"description": "Negate the next #count times you take damage",
+	"effects": [
+		{
+			"type": "NegateDamage",
+			"count": "1"
+		}],
+	"upgrade": {
+		"description": "Choose 1: Negate the next #count times you take damage / Negate the next time you take damage from an enemy attack",
+		"effects": [
+		{
+			"type": "ChooseOne",
+			"choices": [
+			{
+			"type": "NegateDamage",
+			"count": "1"
+			},
+			{
+				"type": "NegateDamage",
+				"count": "1",
+				"source": "enemy"
+			}]
+		}]
+	}
+},
+{
+	"name": "Impervious",
+	"cost": 2,
+	"yield": 0,
+	"price": 2000,
+	"type": ["defensive", "buff"],
+	"rarity": 2,
+	"description": "Gain #duration impervious.",
+	"effects": [
+		{
+			"type": "Impervious",
+			"duration": "1"
+		}],
+	"upgrade": {
+		"cost": 1
+	},
+	"upgrade2": {
+		"effects": [
+		{
+			"type": "Impervious",
+			"duration": "2"
+		}]
+	}
+},
+{
+	"name": "Force Field",
+	"cost": 1,
+	"yield": 1,
+	"price": 100,
+	"type": ["defense"],
+	"rarity": 0,
+	"description": "Gain #defense defense.",
+	"effects": [
+		{
+			"type": "Defense",
+			"defense": 5
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Defense",
+			"defense": 8
+		}]
+	}
+},
+{
+	"name": "Polymer Hull",
+	"cost": 2,
+	"yield": 2,
+	"price": 500,
+	"type": ["defense", "amor"],
+	"rarity": 1,
+	"description": "Gain #armor armor.",
+	"effects": [
+		{
+			"type": "Armor",
+			"armor": 7
+		}],
+	"upgrade": {
+		"cost": 1
+	}
+},
+{
+	"name": "Reposition",
+	"cost": 2,
+	"yield": 0,
+	"price": 500,
+	"type": ["defense", "move"],
+	"rarity": 0,
+	"description": "Gain #defense defense and move #move.",
+	"effects": [
+		{
+			"type": "Defense",
+			"defense": 7
+		},
+		{
+			"type": "Move",
+			"move": 1
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Defense",
+			"defense": 10
+		},
+		{
+			"type": "Move",
+			"move": 2
+		}]
+	}
+},
+{
+	"name": "Energy Cell",
+	"cost": 2,
+	"yield": 0,
+	"price": 750,
+	"type": ["defense"],
+	"rarity": 0,
+	"description": "Gain #defense defense.",
+	"effects": [
+		{
+			"type": "Defense",
+			"defense": 12
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Defense",
+			"defense": 16
+		}]
+	}
+},
+{
+	"name": "Dodge",
+	"cost": 1,
+	"yield": 0,
+	"price": 750,
+	"type": ["defensive", "move", "buff"],
+	"rarity": 0,
+	"description": "Negate the next #attacks incoming projectile attacks, move #move.",
+	"effects": [
+		{
+			"type": "NegateProjectile",
+			"attacks": 1
+		},
+		{
+			"type": "Move",
+			"move": 1
+		}],
+	"upgrade": {
+		"yield": 0.5,
+		"effects": [
+		{
+			"type": "NegateProjectile",
+			"attacks": 1
+		},
+		{
+			"type": "Move",
+			"move": 2
+		}]
+	}
+},
+{
+	"name": "Turn On The Drives",
+	"cost": 3,
+	"yield": 0,
+	"price": 750,
+	"type": ["defense"],
+	"rarity": 0,
+	"description": "Gain #defense defense.",
+	"effects": [
+		{
+			"type": "Defense",
+			"defense": 20
+		}],
+	"upgrade": {
+		"yield": 1,
+		"effects": [
+		{
+			"type": "Defense",
+			"defense": 30
+		}]
+	}
+},
+{
+	"name": "Cool Down",
+	"cost": 2,
+	"yield": 0,
+	"price": 500,
+	"type": ["defense"],
+	"rarity": 1,
+	"description": "Gain #defense defense. You cannot attack next turn.",
+	"effects": [
+		{
+			"type": "Defense",
+			"defense": 20
+		},
+		{
+			"type": "NoAttack"
+		}],
+	"upgrade": {
+		"yield": 0.5,
+		"effects": [
+		{
+			"type": "Defense",
+			"defense": 27
+		},
+		{
+			"type": "NoAttack"
+		}]
+	}
+},
+{
+	"name": "Barrel Roll",
+	"cost": 2,
+	"yield": 1,
+	"price": 750,
+	"type": ["defensive", "draw", "move", "buff"],
+	"rarity": 1,
+	"description": "Negate the next #attacks incoming projectile attacks. Draw #cards cards. Move #move",
+	"effects": [
+		{
+			"type": "NegateProjectile",
+			"attacks": 1
+		},
+		{
+			"type": "Draw",
+			"cards": 1
+		},
+		{
+			"type": "Move",
+			"move": 1
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "NegateProjectile",
+			"attacks": 2
+		},
+		{
+			"type": "Draw",
+			"cards": 1
+		},
+		{
+			"type": "Move",
+			"move": 2
+		}]
+	}
+},
+{
+	"name": "Plan Ahead",
+	"cost": 2,
+	"yield": 1,
+	"price": 1500,
+	"type": ["defense", "draw"],
+	"rarity": 2,
+	"description": "Gain #defense defense. Draw #cards cards.",
+	"effects": [
+		{
+			"type": "Defense",
+			"defense": 20
+		},
+		{
+			"type": "Draw",
+			"cards": 2
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Defense",
+			"defense": 30
+		},
+		{
+			"type": "Draw",
+			"cards": 2
+		}]
+	}
+},
+{
+	"name": "Interception Drones",
+	"cost": "X",
+	"yield": 2,
+	"price": 750,
+	"type": ["defensive", "cost-X", "buff"],
+	"rarity": 1,
+	"description": "Negate the next X + 1 incoming projectile attacks",
+	"effects": [
+		{
+			"type": "NegateProjectile",
+			"attacks": "X"
+		}],
+	"upgrade": {
+		"description": "Negate the next X + 2 incoming projectile attacks",
+		"effects": [
+		{
+			"type": "NegateProjectile",
+			"attacks": "X + 1"
+		}]
+	}
+},
+{
+	"name": "Interception Drone Swarm",
+	"cost": 3,
+	"yield": 2,
+	"price": 750,
+	"type": ["defensive", "buff"],
+	"rarity": 1,
+	"description": "Negate all incoming projectile attacks",
+	"effects": [
+		{
+			"type": "NegateProjectile",
+			"attacks": "all"
+		}],
+	"upgrade": {
+		"type": ["defense", "defensive", "buff"],
+		"description": "Gain #defense defense. Negate all incoming projectile attacks",
+		"effects": [
+		{
+			"type": "Defense",
+			"defense": 7
+		},
+		{
+			"type": "NegateProjectile",
+			"attacks": "X + 1"
+		}]
+	}
+},
+{
+	"name": "Matter Conversion",
+	"cost": 0,
+	"yield": 0,
+	"price": 750,
+	"type": ["defense"],
+	"rarity": 1,
+	"description": "Gain #defense defense for every card you've yielded this turn.",
+	"effects": [
+		{
+			"type": "Matter Conversion",
+			"defense": 5
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Matter Conversion",
+			"defense": 6
+		}]
+	}
+},
+{
+	"name": "Matter Conversion",
+	"cost": 0,
+	"yield": 0,
+	"price": 250,
+	"type": ["defense"],
+	"rarity": 0,
+	"description": "Gain #defense defense. You cannot move for #duration turns.",
+	"effects": [
+		{
+			"type": "Defense",
+			"defense": 7
+		},
+		{
+			"type": "NoMove",
+			"duration": 1
+		}],
+	"upgrade": {
+		"yield": 1,
+		"effects": [
+		{
+			"type": "Defense",
+			"defense": 10
+		},
+		{
+			"type": "NoMove",
+			"duration": 1
+		}]
+	}
+},
+{
+	"name": "Get Outta There!",
+	"cost": 2,
+	"yield": 0,
+	"price": 1000,
+	"type": ["defense", "move"],
+	"rarity": 1,
+	"description": "Gain #defense defense. Move #move.",
+	"effects": [
+		{
+			"type": "Defense",
+			"defense": 10
+		},
+		{
+			"type": "Move",
+			"move": 5
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Defense",
+			"defense": 12
+		},
+		{
+			"type": "Move",
+			"move": 6
+		}]
+	}
+},
+{
+	"name": "Hydrogen Scoop",
+	"cost": 1,
+	"yield": 1,
+	"price": 500,
+	"type": ["defensive", "buff"],
+	"rarity": 1,
+	"description": "Gain #defense defense for each knot you move this turn.",
+	"effects": [
+		{
+			"type": "Condition",
+			"condition": "MoveContinuous",
+			"distance": 1,
+			"repeat": ["-", "turn", 1],
+			"result": [
+			{
+				"type": "Defense",
+				"defense": 1
+			}]
+		}],
+	"upgrade": {
+		"cost": 0
+	}
+},
+{
+	"name": "Defense Phase",
+	"cost": 3,
+	"yield": 2,
+	"price": 1500,
+	"type": ["defensive", "playcard"],
+	"rarity": 2,
+	"description": "Play all defense cards in your hand.",
+	"effects": [
+		{
+			"type": "PlayCard",
+			"tags":
+			{
+				"type": "defense"
+			},
+			"source": "hand",
+			"cards": "all"
+		}],
+	"upgrade": {
+		"type": ["defense", "defensive", "playcard"],
+		"description": "Gain #defense defense. Play all defense cards in your hand.",
+		"effects": [
+		{
+			"type": "PlayCard",
+			"tags":
+			{
+				"type": "defense"
+			},
+			"source": "hand",
+			"cards": "all"
+		},
+		{
+			"type": "Defense",
+			"defense": 10
+		}]
+	}
+},
+{
+	"name": "Voidglass Mirror",
+	"cost": 3,
+	"yield": 3,
+	"price": 2000,
+	"type": ["defensive", "buff"],
+	"rarity": 3,
+	"description": "The next #attacks light/energy attacks deal #percentage % damage less and will be reflected back at the attacker.",
+	"effects": [
+		{
+			"type": "Reflection",
+			"attacks": 4,
+			"attacktypes": ["light", "energy"],
+			"percentage": 50
+		}],
+	"upgrade": {
+		"cost": 2,
+		"effects": [
+		{
+			"type": "Reflection",
+			"attacks": 5,
+			"attacktypes": ["light", "energy"],
+			"percentage": 50
+		}]
+	}	
+},
+{
+	"name": "Alternate Reality",
+	"cost": 3,
+	"yield": 1,
+	"price": 800,
+	"type": ["buff", "defensive"],
+	"rarity": 1,
+	"description": "Gain damage reflection #damage.",
+	"effects": [
+		{
+			"type": "DamageReflection",
+			"damage": 1
+		}],
+	"upgrade": {
+		"cost": 2
+	}
+},
+{
+	"name": "Parallel Dimension",
+	"cost": 4,
+	"yield": 2,
+	"price": 3000,
+	"type": ["summon", "buff"],
+	"rarity": 3,
+	"description": "Create a copy of yourself that lasts until the end of the battle. Cards can be played from either the original or the copy.",
+	"effects": [
+		{
+			"type": "Parallel Dimension"
+		}],
+	"upgrade": {
+		"cost": 3
+	}
+},
+{
+	"name": "Cash In",
+	"cost": 0,
+	"yield": 2,
+	"price": 1000,
+	"type": ["defense"],
+	"rarity": 2,
+	"description": "Gain defense equal to the cost of all cards in your hand.",
+	"effects": [
+		{
+			"type": "Cash In"
+		}],
+	"upgrade": {
+		"description": "Gain #defense defense. Gain defense equal to the cost of all cards in your hand.",
+		"effects": [
+		{
+			"type": "Cash In"
+		},
+		{
+			"type": "Defense",
+			"defense": 3
+		}]
+	}
+},
+{
+	"name": "Step On It",
+	"cost": 2,
+	"yield": 0,
+	"price": 500,
+	"type": ["move", "speed"],
+	"rarity": 1,
+	"description": "Gain #speed speed for #duration turns. Move #move.",
+	"effects": [
+		{
+			"type": "Speed",
+			"speed": 5,
+			"duration": 1
+		},
+		{
+			"type": "Move",
+			"move": 3
+		}],
+	"upgrade": {
+		"yield": 1,
+		"effects": [
+		{
+			"type": "Speed",
+			"speed": 5,
+			"duration": 1
+		},
+		{
+			"type": "Move",
+			"move": 4
+		}]
+	}
+},
+{
+	"name": "Floor It",
+	"cost": 3,
+	"yield": 1,
+	"price": 1000,
+	"type": ["move", "speed"],
+	"rarity": 2,
+	"description": "Gain #speed speed for #duration turns. Move #move.",
+	"effects": [
+		{
+			"type": "Speed",
+			"speed": 10,
+			"duration": 1
+		},
+		{
+			"type": "Move",
+			"move": 4
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Speed",
+			"speed": 5,
+			"duration": 1
+		},
+		{
+			"type": "Move",
+			"move": 4
+		}]
+	}
+},
+{
+	"name": "Move",
+	"cost": 1,
+	"yield": 0.5,
+	"price": 100,
+	"type": ["move"],
+	"rarity": 0,
+	"description": "Move #move.",
+	"effects": [
+		{
+			"type": "Move",
+			"move": 3
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Move",
+			"move": 4
+		}]
+	}
+},
+{
+	"name": "Expedition Funds",
+	"cost": 3,
+	"yield": 0,
+	"price": 1500,
+	"type": ["draw", "buff"],
+	"rarity": 2,
+	"description": "Draw #cards cards for every #distance knots you move this turn (up to 3 cards).",
+	"effects": [
+		{
+			"type": "Condition",
+			"condition": "MoveContinuous",
+			"distance": 15,
+			"repeat": [3],
+			"result": [
+			{
+				"type": "Draw",
+				"cards": 1
+			}]
+		}],
+	"upgrade": {
+		"description": "Draw #cards cards for every #distance knots you move this turn (up to 4 cards).",
+		"effects": [
+		{
+			"type": "Condition",
+			"condition": "MoveContinuous",
+			"distance": 10,
+			"repeat": [4],
+			"result": [
+			{
+				"type": "Draw",
+				"cards": 1
+			}]
+		}]
+	}
+},
+{
+	"name": "Force Field Propulsion",
+	"cost": 2,
+	"yield": 2,
+	"price": 1500,
+	"type": ["buff"],
+	"rarity": 2,
+	"description": "Every time you gain defense, move #move",
+	"effects": [
+		{
+			"type": "Condition",
+			"condition": "Defense",
+			"defense": 1,
+			"repeat": ["-", "turn", 1],
+			"result": [
+			{
+				"type": "Move",
+				"move": 1
+			}]
+		}],
+	"upgrade": {
+		"description": "Gain #speed speed for #duration turns. Every time you gain defense, move #move",
+		"effects": [
+		{
+			"type": "Speed",
+			"speed": 5,
+			"duration": 1
+		},
+		{
+			"type": "Condition",
+			"condition": "Defense",
+			"defense": 1,
+			"repeat": ["-", "turn", 1],
+			"result": [
+			{
+				"type": "Move",
+				"move": 1
+			}]
+		}]
+	}
+},
+{
+	"name": "FTL",
+	"cost": 5,
+	"yield": 2,
+	"price": 4000,
+	"type": ["buff", "defensive"],
+	"rarity": 3,
+	"description": "You cannot be attacked for #duration turns. No minimum distances apply for your attacks (except 0-distance attacks).",
+	"effects": [
+		{
+			"type": "CannotBeAttacked",
+			"duration": 1
+		},
+		{
+			"type": "NoMinimumAttackDistance1",
+			"duration": 1
+		}],
+	"upgrade": {
+		"description": "You cannot be attacked for #duration turns. No minimum distances apply for your attacks (except 0-distance attacks).",
+		"effects": [
+		{
+			"type": "CannotBeAttacked",
+			"duration": 1
+		},
+		{
+			"type": "NoMinimumAttackDistance2",
+			"duration": 1
+		}]
+	}
+},
+{
+	"name": "Hyperdrive",
+	"cost": 2,
+	"yield": 2,
+	"price": 500,
+	"type": ["speed", "buff"],
+	"rarity": 1,
+	"description": "Gain #speed speed for #duration turns.",
+	"effects": [
+		{
+			"type": "Speed",
+			"speed": 5,
+			"duration": 3
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Speed",
+			"speed": 5,
+			"duration": 4
+		}]
+	}
+},
+{
+	"name": "Evasion",
+	"cost": 2,
+	"yield": 1,
+	"price": 250,
+	"type": ["speed", "buff", "defensive", "move"],
+	"rarity": 0,
+	"description": "Gain #speed speed for #duration turns. Move #move away from the enemy.",
+	"effects": [
+		{
+			"type": "Speed",
+			"speed": 5,
+			"duration": 1
+		},
+		{
+			"type": "Move",
+			"move": 3,
+			"direction": "away"
+		}],
+	"upgrade": {
+		"yield": 2,
+		"effects": [
+		{
+			"type": "Speed",
+			"speed": 5,
+			"duration": 1
+		},
+		{
+			"type": "Move",
+			"move": 4,
+			"direction": "away"
+		}]
+	}
+},
+{
+	"name": "Charge",
+	"cost": 2,
+	"yield": 1,
+	"price": 250,
+	"type": ["speed", "buff", "offensive", "move"],
+	"rarity": 0,
+	"description": "Gain #speed speed for #duration turns. Move #move towards the enemy.",
+	"effects": [
+		{
+			"type": "Speed",
+			"speed": 5,
+			"duration": 1
+		},
+		{
+			"type": "Move",
+			"move": 3,
+			"direction": "towards"
+		}],
+	"upgrade": {
+		"yield": 2,
+		"effects": [
+		{
+			"type": "Speed",
+			"speed": 5,
+			"duration": 1
+		},
+		{
+			"type": "Move",
+			"move": 4,
+			"direction": "towards"
+		}]
+	}
+},
+{
+	"name": "Reality Dysfunction",
+	"cost": 2,
+	"yield": 2,
+	"price": 600,
+	"type": ["buff"],
+	"rarity": 1,
+	"description": "Yield cards for their cost this turn",
+	"effects": [
+		{
+			"type": "Reality Dysfunction",
+			"duration": 1
+		}],
+	"upgrade": {
+		"cost": 1
+	}
+},
+{
+	"name": "Causality Reversal",
+	"cost": 3,
+	"yield": 2,
+	"price": 1250,
+	"type": ["buff"],
+	"rarity": 2,
+	"description": "Cards go from your hand to your draw pile. Exhaust.",
+	"effects": [
+		{
+			"type": "Causality Reversal"
+		},
+		{
+			"type": "Exhaust"
+		}],
+	"upgrade": {
+		"cost": 2
+	}
+},
+{
+	"name": "Planet Discovery",
+	"cost": 3,
+	"yield": 2,
+	"price": 1250,
+	"type": ["discover"],
+	"rarity": 2,
+	"description": "Choose #choices out of #options cards and add them to your draw pile (they cost #discount less). Exhaust",
+	"effects": [
+		{
+			"type": "Discovery",
+			"tags": ["all"],
+			"choices": 4,
+			"options": 8,
+			"destination": "drawpile",
+			"discount": 1
+		},
+		{
+			"type": "Exhaust"
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "Discovery",
+			"tags": ["all"],
+			"choices": 4,
+			"options": 8,
+			"destination": "drawpile",
+			"discount": 2
+		},
+		{
+			"type": "Exhaust"
+		}]
+	}
+},
+{
+	"name": "Quantum Interference Field",
+	"cost": 2,
+	"yield": 2,
+	"price": 1500,
+	"type": ["offensive", "area", "debuff"],
+	"rarity": 2,
+	"description": "All force fields shut down for #duration turns.",
+	"effects": [
+		{
+			"type": "LoseForceField",
+			"target": "all"
+		}],
+	"upgrade": {
+		"yield": 3,
+		"effects": [
+		{
+			"type": "LoseForceField",
+			"duration": 2,
+			"target": "all"
+		}]
+	}
+},
+{
+	"name": "Photon Brain",
+	"cost": 3,
+	"yield": 3,
+	"price": 2500,
+	"type": ["buff", "defensive"],
+	"rarity": 2,
+	"description": "Your drives become impervious to interference fields targeting quantum- or electricity based systems",
+	"effects": [
+		{
+			"type": "Photon Brain"
+		}],
+	"upgrade": {
+		"cost": 2
+	}
+},
+{
+	"name": "Russian Roulette",
+	"cost": 4,
+	"yield": 0,
+	"price": 2500,
+	"type": ["buff", "draw"],
+	"rarity": 2,
+	"description": "For every #cards cards you yield this turn, draw #cards cards.",
+	"effects": [
+		{
+			"type": "Condition",
+			"condition": "YieldCardContinuous",
+			"cards": 2,
+			"repeat": ["-", "turn", 1],
+			"result": [
+			{
+				"type": "DrawCard",
+				"cards": 1
+			}]
+		}],
+	"upgrade": {
+		"cost": 3
+	}
+},
+{
+	"name": "Space Rush",
+	"cost": 2,
+	"yield": 2,
+	"price": 3000,
+	"type": ["buff"],
+	"rarity": 3,
+	"description": "Whenever you play a card, yield #cards cards in your draw pile.",
+	"effects": [
+		{
+			"type": "Condition",
+			"condition": "PlayCard",
+			"repeat": ["-", "turn", 1],
+			"result": [
+			{
+				"type": "YieldCard",
+				"source": "drawpile"
+			}]
+		}],
+	"upgrade": {
+		"description": "Whenever you play a card, yield #cards cards in your draw pile. Draw #cards cards.",
+		"effects": [
+		{
+			"type": "Condition",
+			"condition": "PlayCard",
+			"repeat": ["-", "turn", 1],
+			"result": [
+			{
+				"type": "YieldCard",
+				"source": "drawpile"
+			}]
+		},
+		{
+			"type": "DrawCard",
+			"cards": 1
+		}]
+	}
+},
+{
+	"name": "Gold-Inator",
+	"cost": 2,
+	"yield": 0,
+	"price": 2000,
+	"type": ["draw", "yield"],
+	"rarity": 2,
+	"description": "Yield all your cards. Draw #cards cards for each card that costs over 2.",
+	"effects": [
+		{
+			"type": "Condition",
+			"condition": "YieldCard",
+			"tags":
+			{
+				"cost": ">2"
+			},
+			"repeat": ["-", "endofcard"],
+			"result": [
+			{
+				"type": "DrawCard",
+				"cards": 1
+			}]
+		},
+		{
+			"type": "YieldCard",
+			"cards": "all",
+			"target": "hand"
+		}],
+	"upgrade": {
+		"yield": 2
+	}
+},
+{
+	"name": "Supply Box",
+	"cost": 0,
+	"yield": 3,
+	"price": 0,
+	"type": ["draw", "special"],
+	"rarity": 0,
+	"description": "Draw #cards cards.",
+	"effects": [
+		{
+			"type": "DrawCard",
+			"cards": 1
+		}]
+},
+{
+	"name": "Supplies",
+	"cost": 2,
+	"yield": 0,
+	"price": 2500,
+	"type": ["buff", "addcard"],
+	"rarity": 2,
+	"description": "Shuffle #cards Supply Box into your drawpile",
+	"effects": [
+		{
+			"type": "AddCard",
+			"card": "Supply Box",
+			"cards": 1
+		}],
+	"upgrade": {
+		"effects": [
+		{
+			"type": "AddCard",
+			"card": "Supply Box",
+			"cards": 2
+		}]
+	}
+},
+{
+	"name": "Money Cannon",
+	"cost": 1,
+	"yield": 1,
+	"price": 1000,
+	"type": ["buff", "offensive"],
+	"rarity": 1,
+	"description": "Whenever you yield #cards cards, deal #damage damage to the closest enemy.",
+	"effects": [
+		{
+			"type": "Condition",
+			"condition": "YieldCard",
+			"repeat": ["-", "turn", 1],
+			"result": [
+			{
+				"type": "Damage",
+				"damage": 2,
+				"target": "closest"
+			}]
+		}],
+	"upgrade": {
+		"description": "Whenever you yield #cards cards, deal #damage damage to the closest enemy. Effect lasts 2 turns.",
+		"effects": [
+		{
+			"type": "Condition",
+			"condition": "YieldCard",
+			"repeat": ["-", "turn", 2],
+			"result": [
+			{
+				"type": "Damage",
+				"damage": 3,
+				"target": "closest"
+			}]
 		}]
 	}
 }
