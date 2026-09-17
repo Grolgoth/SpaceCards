@@ -12,18 +12,18 @@ public static class CardParser
             return null;
         }
 
-        int id = JsonParser.GetIntFromJSON(jsonObject, "id");
+        string id = JsonParser.GetStringFromJSON(jsonObject, "name");
 
         Card card = new Card(id);
 
-        card.name = JsonParser.GetStringFromJSON(jsonObject, "name");
         card.cost = JsonParser.GetIntFromJSON(jsonObject, "cost");
         card.yield = JsonParser.GetIntFromJSON(jsonObject, "yield");
         card.price = JsonParser.GetIntFromJSON(jsonObject, "price");
+        card.rarity = JsonParser.GetIntFromJSON(jsonObject, "rarity");
         card.description = JsonParser.GetStringFromJSON(jsonObject, "description");
-        card.tag = JsonParser.GetStringFromJSON(jsonObject, "tag");
+        card.tags = JsonParser.GetStringListFromJSON(jsonObject, "type");
 
-        JArray effectsArray = jsonObject["effects"] as JArray;
+        JArray effectsArray = JsonParser.GetJArrayFromJSON(jsonObject, "effects");
 
         if (effectsArray != null)
         {

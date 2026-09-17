@@ -4,7 +4,6 @@ using Newtonsoft.Json.Linq;
 
 public static class CardEffectParser
 {
-    static readonly List<string> EffectsWithAmount = new() { "DrawEffect", "DamageEffect", "DefenseEffect", "ArmorEffect", "SpeedEffect", "AddCardEffect", "PlayCardEffect" };
 
     public static CardEffect Parse(JObject jsonObject, Card Root)
     {
@@ -16,20 +15,34 @@ public static class CardEffectParser
             return null;
         }
 
-        int amount = 0;
-
-        //optimising
-        if (EffectsWithAmount.Contains(type))
-            amount = JsonParser.GetIntFromJSON(jsonObject, "amount");
-
-        if (type == "DrawEffect")
+        if (type == "Draw")
         {
-            string FromSource = JsonParser.GetStringFromJSON(jsonObject, "source");
-            return new DrawEffect(Root, amount, FromSource);
+            return new DrawEffect(Root, jsonObject);
         }
-        else if (type == "DamageEffect")
+        else if (type == "ToDrawPile")
         {
-            return new DamageEffect(Root, amount);
+            return new ToDrawPileEffect(Root, jsonObject);
+        }
+        else if (type == "Damage")
+        {
+            return new DamageEffect(Root, jsonObject);
+        }
+        else if (type == "Nprojectile")
+        {
+            return new NProjectileEffect(Root, jsonObject);
+        }
+        else if (type == "Condition")
+        {
+            Root.conditions.Add(ConditionParser.Parse(jsonObject, Root));
+            return null;
+        }
+        else if (type == "NullDefense")
+        {
+            return new NullDefenseEffect(Root, jsonObject);
+        }
+        else if (type == "DefenseLeech")
+        {
+            return new DefenseLeechEffect(Root, jsonObject);
         }
         else
             return null;

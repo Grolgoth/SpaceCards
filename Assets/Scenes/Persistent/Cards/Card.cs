@@ -6,17 +6,18 @@ using Newtonsoft.Json.Linq;
 
 public class Card
 {
-    public int id;
     public string name;
     public int cost;
     public int yield;
     public int price;
+    public int rarity;
     public string description;
-    public string tag;
+    public List<string> tags;
     public List<CardEffect> effects = new();
+    public List<Condition> conditions = new();
 
-    public Card(int idarg)
+    public Card(string namearg)
     {
-        id = idarg;
+        name = namearg;
     }
 }
