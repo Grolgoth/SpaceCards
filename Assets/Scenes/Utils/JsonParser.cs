@@ -5,6 +5,17 @@ using System.Linq;
 
 public static class JsonParser
 {
+    public static JTokenType GetJSONType(JObject o, string name)
+    {
+        if (o != null && o.TryGetValue(name, System.StringComparison.OrdinalIgnoreCase, out JToken token))
+        {
+            return token.Type;
+        }
+
+        Debug.Log($"Argument '{name}' not found in JSON object.");
+        return JTokenType.None;
+    }
+
     public static bool GetBoolFromJSON(JObject o, string name)
     {
         if (o == null || o[name] == null)
@@ -33,6 +44,24 @@ public static class JsonParser
         try
         {
             return (int)o[name];
+        }
+        catch
+        {
+            Debug.Log("Error parsing int for " + name + " argument in: " + o.ToString());
+            return 0;
+        }
+    }
+
+    public static float GetFloatFromJSON(JObject o, string name)
+    {
+        if (o == null || o[name] == null)
+        {
+            Debug.Log("Error parsing " + o?.ToString() + ". " + name + " argument not found");
+            return 0;
+        }
+        try
+        {
+            return (float)o[name];
         }
         catch
         {

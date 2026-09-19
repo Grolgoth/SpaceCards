@@ -44,6 +44,18 @@ public static class CardEffectParser
         {
             return new DefenseLeechEffect(Root, jsonObject);
         }
+        else if (type == "ForceFieldDamage")
+        {
+            return new ForceFieldDamageEffect(Root, jsonObject);
+        }
+        else if (type == "LoseForceField")
+        {
+            return new LoseForceFieldEffect(Root, jsonObject);
+        }
+        else if (type == "Inefficiency" || type == "Vulnerable" || type == "Weakness" || type == "LoseSpeed" || type == "NoAttack")
+        {
+                return new DebuffEffect(Root, jsonObject, type);
+        }
         else
             return null;
     }

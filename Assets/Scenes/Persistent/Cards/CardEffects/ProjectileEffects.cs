@@ -2,13 +2,13 @@ using UnityEngine;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 
-public class NProjectileEffect : CardEffect
+public class NProjectileEffect : AttackEffect
 {
     public int count = 1;
 
     public List<CardEffect> Effects;
 
-    public NProjectileEffect(Card Rootarg, JObject o) : base(Rootarg, "NProjectile")
+    public NProjectileEffect(Card Rootarg, JObject o) : base(Rootarg, o, "NProjectile")
     {
         count = JsonParser.GetIntFromJSON(o, "count");
 

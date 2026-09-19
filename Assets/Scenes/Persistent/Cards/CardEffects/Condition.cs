@@ -87,16 +87,16 @@ public abstract class Condition
 public class NotBlockedCondition : Condition
 {
 
-    public DamageEffect damage;
+    public AttackEffect attack;
 
-    public NotBlockedCondition(Card Rootarg, JObject o, DamageEffect e) : base(Rootarg, o)
+    public NotBlockedCondition(Card Rootarg, JObject o, AttackEffect e) : base(Rootarg, o)
     {
-        damage = e;
+        attack = e;
     }
 
     public override bool Check()
     {
-        return !damage.WasBlocked;
+        return !attack.WasBlocked;
     }
 }
 

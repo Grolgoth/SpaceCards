@@ -447,7 +447,7 @@
 	"effects": [
 		{
 			"type": "Nprojectile",
-			"effects": [{"type": "Damage", "damage": 8}]
+			"effects": [{"type": "Damage", "damage": 9}]
 	}],
 	"upgrade": {
 		"playconditions": [
@@ -626,7 +626,7 @@
 	"price": 700,
 	"type": ["attack", "projectile", "debuff", "offensive"],
 	"rarity": 0,
-	"description": "Projectile attack (#reach reach). Deal #damage damage. Target loses #speed speed",
+	"description": "Projectile attack (#reach reach). Deal #damage damage. Target loses #speed speed for #duration turns.",
 	"playconditions": [
 	{
 		"type": "distance",
@@ -638,7 +638,8 @@
 			"effects": [
 			{
 				"type": "LoseSpeed",
-				"speed": 12
+				"speed": 12,
+				"duration": 2
 			},
 			{
 				"type": "Damage", 
@@ -660,7 +661,7 @@
 	"price": 1500,
 	"type": ["attack", "projectile", "debuff", "offensive"],
 	"rarity": 2,
-	"description": "Projectile attack (#reach reach). Deal #damage damage. Target cannot use their force field for #duration turns",
+	"description": "Projectile attack (#reach reach). Target loses their force field. Then deal #damage damage. Target cannot use their force field for #duration turns",
 	"playconditions": [
 	{
 		"type": "distance",
@@ -671,7 +672,7 @@
 			"type": "Nprojectile",
 			"effects": [
 			{
-				"type": "NoForceField",
+				"type": "NullDefense",
 				"duration": 1
 			},
 			{
@@ -690,7 +691,7 @@
 	"price": 1250,
 	"type": ["attack", "projectile", "area", "debuff", "offensive"],
 	"rarity": 1,
-	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies. Targets lose #speed speed",
+	"description": "Projectile attack (#reach reach). Deal #damage damage to all enemies. Targets lose #speed speed for #duration turns.",
 	"playconditions": [
 	{
 		"type": "distance",
@@ -702,7 +703,8 @@
 			"effects": [
 			{
 				"type": "LoseSpeed",
-				"speed": 12
+				"speed": 12,
+				"duration": 3
 			},
 			{
 				"type": "Damage", 
@@ -923,7 +925,7 @@
 	"price": 800,
 	"type": ["attack", "repair", "offensive", "buff", "defensive"],
 	"rarity": 1,
-	"description": "Deal #damage damage. Repair #value hp.",
+	"description": "Deal #damage damage. Repair #repair hp.",
 	"playconditions": [
 	{
 		"type": "distance",
@@ -936,7 +938,7 @@
 		},
 		{
 			"type": "Repair",
-			"value": 3
+			"repair": 3
 		}],
 	"upgrade": {
 		"cost": 1,
@@ -952,7 +954,7 @@
 		},
 		{
 			"type": "Repair",
-			"value": 5
+			"repair": 5
 		}]
 	}
 },
@@ -1091,7 +1093,7 @@
 		},
 		{
 			"type": "LoseForceField",
-			"value": "0.2 $forcefield",
+			"percent": 0.2,
 			"target": "self"
 		}],
 	"upgrade": {
@@ -1102,7 +1104,7 @@
 			},
 			{
 				"type": "LoseForceField",
-				"value": "0.1 $forcefield",
+				"percent": 0.1,
 				"target": "self"
 			}]
 	}
@@ -1226,7 +1228,7 @@
 		}],
 	"effects": [
 		{
-			"type": "Ineficiency",
+			"type": "Inefficiency",
 			"duration": 2
 		},
 		{
@@ -1237,14 +1239,14 @@
 			"startdelay": 1,
 			"result": [
 			{
-				"type": "Ineficiency",
+				"type": "Inefficiency",
 				"duration": 1
 			}]
 		}],
 	"upgrade": {
 		"effects": [
 		{
-			"type": "Ineficiency",
+			"type": "Inefficiency",
 			"duration": 3
 		},
 		{
@@ -1255,7 +1257,7 @@
 			"startdelay": 1,
 			"result": [
 			{
-				"type": "Ineficiency",
+				"type": "Inefficiency",
 				"duration": 1
 			}]
 		}]
@@ -1378,7 +1380,8 @@
 		},
 		{
 			"type": "LoseSpeed",
-			"speed": 5
+			"speed": 5,
+			"duration": -1
 		},
 		{
 			"type": "LoseArmor",
@@ -1392,7 +1395,8 @@
 		"effects": [
 		{
 			"type": "LoseSpeed",
-			"speed": 5
+			"speed": 5,
+			"duration": -1
 		},
 		{
 			"type": "LoseArmor",
@@ -1415,7 +1419,7 @@
 	"price": 300,
 	"type": ["attack", "0-distance", "debuff", "offensive"],
 	"rarity": 0,
-	"description": "0-distance attack. Deal #damage damage. Target loses #speed speed",
+	"description": "0-distance attack. Deal #damage damage. Target loses #speed speed for #duration turns",
 	"playconditions": [
 		{
 			"type": "distance",
@@ -1424,21 +1428,23 @@
 	"effects": [
 		{
 			"type": "Damage",
-			"damage": "6"
+			"damage": 6
 		},
 		{
 			"type": "LoseSpeed",
-			"speed": 10
+			"speed": 10,
+			"duration": 1
 		}],
 	"upgrade": {
 		"effects": [
 		{
 			"type": "Damage",
-			"damage": "8"
+			"damage": 8
 		},
 		{
 			"type": "LoseSpeed",
-			"speed": 10
+			"speed": 10,
+			"duration": 1
 		}]
 	}
 },
@@ -1493,7 +1499,7 @@
 	"price": 500,
 	"type": ["attack", "0-distance", "debuff", "offensive"],
 	"rarity": 1,
-	"description": "0-distance attack. Deal #damage damage. Target loses #speed speed. Target gains #weakness weakness.",
+	"description": "0-distance attack. Deal #damage damage. Target loses #speed speed for #duration turns. Target gains #duration weakness.",
 	"playconditions": [
 		{
 			"type": "distance",
@@ -1506,11 +1512,12 @@
 		},
 		{
 			"type": "LoseSpeed",
-			"speed": 5
+			"speed": 5,
+			"duration": 2
 		},
 		{
 			"type": "Weakness",
-			"weakness": 1
+			"duration": 1
 		}],
 	"upgrade": {
 		"effects": [
@@ -1520,11 +1527,12 @@
 			},
 			{
 				"type": "LoseSpeed",
-				"speed": 5
+				"speed": 5,
+				"duration": 2
 			},
 			{
 				"type": "Weakness",
-				"weakness": 2
+				"duration": 2
 			}]
 	}
 },

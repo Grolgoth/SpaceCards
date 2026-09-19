@@ -7,7 +7,7 @@ public class DrawEffect : CardEffect
     public int cards;
     public string FromSource = "drawpile";
 
-    public DrawEffect(Card Rootarg, JObject o) : base(Rootarg, "Draw")
+    public DrawEffect(Card Rootarg, JObject o) : base(Rootarg, o, "Draw")
     {
         cards = JsonParser.GetIntFromJSON(o, "cards");
 
@@ -26,7 +26,7 @@ public class DiscardEffect : CardEffect
     public int amount;
     public string FromSource;
 
-    public DiscardEffect(Card Rootarg, JObject o) : base(Rootarg, "Discard")
+    public DiscardEffect(Card Rootarg, JObject o) : base(Rootarg, o, "Discard")
     {
 
     }
@@ -44,9 +44,8 @@ public class ToDrawPileEffect : CardEffect
     public bool thisCard = false;
     public List<string> tags;
 
-    public ToDrawPileEffect(Card Rootarg, JObject o) : base(Rootarg, "ToDrawPile")
+    public ToDrawPileEffect(Card Rootarg, JObject o) : base(Rootarg, o, "ToDrawPile")
     {
-        target = JsonParser.GetStringFromJSON(o, "target");
         thisCard = target == "this";
         
         if (o["cards"] != null)
